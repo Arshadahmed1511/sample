@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Aether EV | Futuristic Electric Grand Tourer Demonstration</title>
+  <meta name="description" content="Experience the future of mobility with the Aether EV GT. 520 miles range, 0-60 in 1.89 seconds, tri-motor AWD, and solid-state charging technology. Book your test drive today.">
+  <meta name="keywords" content="electric vehicle, EV, electric grand tourer, sports car, futuristic vehicle, Aether EV, test drive, sustainable transport">
+  <meta name="author" content="Aether Electric Vehicles">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Aether EV | Futuristic Electric Grand Tourer">
+  <meta property="og:description" content="Experience high-performance sustainable engineering. Book a test drive for the next generation of electric mobility.">
+  <meta property="og:image" content="assets/hero.png">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='25' y='25' width='50' height='50' rx='10' transform='rotate(45 50 50)' fill='%2300f2fe'/></svg>">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- --- HEADER & NAVIGATION --- -->
+  <header class="header" id="site-header">
+    <div class="container nav-container">
+      <a href="#" class="logo" id="nav-logo">
+        <span class="logo-icon" id="logo-icon-img"></span>
+        AETHER
+      </a>
+      
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu-list">
+          <li><a href="#design" class="nav-link" id="link-design">Design</a></li>
+          <li><a href="#performance" class="nav-link" id="link-performance">Performance</a></li>
+          <li><a href="#technology" class="nav-link" id="link-technology">Technology</a></li>
+          <li><a href="#pre-order" class="nav-link" id="link-pre-order">Pre-Order</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#pre-order" class="btn btn-secondary" id="nav-btn-booking">Book Test Drive</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- --- HERO SECTION --- -->
+  <section class="hero" id="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content reveal" id="hero-text-block">
+        <span class="accent-text-glow">Engineering the Future</span>
+        <h1 class="gradient-text">AETHER GT</h1>
+        <p>The ultimate expression of luxury, aerodynamics, and pure electric power. Designed without compromise, engineered for the extraordinary.</p>
+        
+        <div class="hero-cta">
+          <a href="#design" class="btn btn-primary" id="hero-cta-explore"><span>Explore Configurator</span></a>
+          <a href="#pre-order" class="btn btn-secondary" id="hero-cta-reserve">Book Test Drive</a>
+        </div>
+
+        <div class="hero-stats" id="hero-stats-panel">
+          <div class="hero-stat-item">
+            <h3 id="stat-range-val">520<span style="color: var(--accent-teal)">mi</span></h3>
+            <p>Target Range</p>
+          </div>
+          <div class="hero-stat-item">
+            <h3 id="stat-speed-val">1.89<span style="color: var(--accent-teal)">s</span></h3>
+            <p>0 - 60 MPH</p>
+          </div>
+          <div class="hero-stat-item">
+            <h3 id="stat-power-val">210<span style="color: var(--accent-teal)">mph</span></h3>
+            <p>Top Speed</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual" id="hero-visual-block">
+        <div class="hero-bg-glow"></div>
+        <div class="hero-image-wrapper">
+          <img src="assets/hero.png" alt="Aether GT electric sports car in studio lighting" id="hero-main-image" loading="eager">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- CONFIGURATOR SECTION --- -->
+  <section class="configurator section-padding" id="design">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="accent-text-glow">Personalize Your Ride</span>
+        <h2>Design Your Masterpiece</h2>
+        <p>Choose from our bespoke, sustainably-crafted exterior finishes and view key specification adjustments in real-time.</p>
+      </div>
+
+      <div class="configurator-grid">
+        <div class="config-visual reveal" id="config-visual-panel">
+          <div class="config-image-container">
+            <img src="assets/hero.png" alt="Aether GT interactive configuration image" id="config-vehicle-img">
+            <!-- Custom tint filters applied dynamically in CSS using mix-blend-mode overlay/color -->
+            <div class="config-image-overlay teal active" id="overlay-teal"></div>
+            <div class="config-image-overlay carbon" id="overlay-carbon"></div>
+            <div class="config-image-overlay white" id="overlay-white"></div>
+            <div class="config-image-overlay text-overlay amber" id="overlay-amber"></div>
+          </div>
+        </div>
+
+        <div class="config-details glass-panel reveal" id="config-panel-controls">
+          <div class="color-picker">
+            <h3>Select Exterior Finish</h3>
+            <div class="color-options" role="radiogroup" aria-label="Vehicle Exterior Colors">
+              <button class="color-option active" id="btn-color-teal" style="--opt-color: var(--color-aurora-teal);" role="radio" aria-checked="true" aria-label="Aurora Teal"></button>
+              <button class="color-option" id="btn-color-carbon" style="--opt-color: var(--color-stealth-carbon);" role="radio" aria-checked="false" aria-label="Stealth Carbon"></button>
+              <button class="color-option" id="btn-color-white" style="--opt-color: var(--color-cosmic-white);" role="radio" aria-checked="false" aria-label="Cosmic White"></button>
+              <button class="color-option" id="btn-color-amber" style="--opt-color: var(--color-sunset-amber);" role="radio" aria-checked="false" aria-label="Sunset Amber"></button>
+            </div>
+            <p class="color-name" id="selected-color-name">Aurora Teal Metallic</p>
+          </div>
+
+          <div class="config-spec-preview">
+            <div class="config-spec-grid">
+              <div class="config-spec-item">
+                <h4>Dynamic Range</h4>
+                <div class="value" id="config-range">520 miles</div>
+              </div>
+              <div class="config-spec-item">
+                <h4>Peak Power</h4>
+                <div class="value" id="config-power">1,020 hp</div>
+              </div>
+              <div class="config-spec-item">
+                <h4>0-60 mph</h4>
+                <div class="value" id="config-accel">1.89 seconds</div>
+              </div>
+              <div class="config-spec-item">
+                <h4>Drivetrain</h4>
+                <div class="value" id="config-drivetrain">Tri-Motor AWD</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- SPECIFICATIONS SECTION --- -->
+  <section class="specs section-padding" id="performance">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="accent-text-glow">Engineered Excellence</span>
+        <h2>Breakthrough Technology</h2>
+        <p>A closer look at the advanced components that power the industry-defining performance of Aether GT.</p>
+      </div>
+
+      <div class="specs-grid">
+        <div class="spec-card glass-panel reveal" id="spec-card-battery">
+          <div class="spec-icon" aria-hidden="true">🔋</div>
+          <h3>Solid-State Battery</h3>
+          <p>Next-gen high-density battery cells offer 50% higher energy density than lithium-ion, providing extended range and thermal stability.</p>
+          <div class="spec-number">520 <span style="font-size: 1.5rem">mi</span></div>
+        </div>
+
+        <div class="spec-card glass-panel reveal" id="spec-card-aero">
+          <div class="spec-icon" aria-hidden="true">💨</div>
+          <h3>Ultra Aero Body</h3>
+          <p>An incredibly low drag coefficient combined with active carbon fiber spoilers and adaptive underbody vents for maximum efficiency.</p>
+          <div class="spec-number">0.19 <span style="font-size: 1.5rem">Cd</span></div>
+        </div>
+
+        <div class="spec-card glass-panel reveal" id="spec-card-charging">
+          <div class="spec-icon" aria-hidden="true">⚡</div>
+          <h3>Supercharge 3.0</h3>
+          <p>800V fast-charging architecture gets you back on the road in minutes. Compatible with all global CCS high-power chargers.</p>
+          <div class="spec-number">10 <span style="font-size: 1.5rem">min</span></div>
+        </div>
+
+        <div class="spec-card glass-panel reveal" id="spec-card-motors">
+          <div class="spec-icon" aria-hidden="true">⚙️</div>
+          <h3>Tri-Motor AWD</h3>
+          <p>One front motor and two rear motors with independent torque vectoring distribute power instantly to each wheel for sharp traction.</p>
+          <div class="spec-number">1,020 <span style="font-size: 1.5rem">hp</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- TECHNOLOGY & INTERIOR SHOWCASE --- -->
+  <section class="technology section-padding" id="technology">
+    <div class="container">
+      
+      <!-- Tech Block 1: Interior Cockpit -->
+      <div class="tech-block">
+        <div class="tech-content reveal" id="tech-content-interior">
+          <span class="accent-text-glow">Luxury & Control</span>
+          <h3>The Cockpit of Tomorrow</h3>
+          <p>Step inside a cabin that merges premium sustainable materials with revolutionary ergonomics. The minimalist steering yoke and panoramic wrap-around display deliver intuitive, driver-centric information at a glance.</p>
+          <ul class="tech-feature-list">
+            <li>35-inch curved Panoramic OLED Display</li>
+            <li>Carbon-neutral vegan leather & recycled aluminum trims</li>
+            <li>Bespoke 22-speaker Spatial Audio System</li>
+            <li>Aether OS with real-time AI Route Planning</li>
+          </ul>
+        </div>
+        <div class="tech-visual reveal" id="tech-visual-interior">
+          <img src="assets/interior.png" alt="Futuristic luxury interior cockpit of Aether GT" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Tech Block 2: Charging Tech -->
+      <div class="tech-block">
+        <div class="tech-visual reveal" id="tech-visual-charging">
+          <img src="assets/charging.png" alt="Futuristic EV charging port glowing on Aether GT" loading="lazy">
+        </div>
+        <div class="tech-content reveal" id="tech-content-charging">
+          <span class="accent-text-glow">Seamless Power</span>
+          <h3>Bidirectional Smart Charging</h3>
+          <p>With Aether Supercharge, refueling is completely painless. Not only does the vehicle charge rapidly, but its Vehicle-to-Home (V2H) system allows you to power your home during blackouts or feed energy back into the grid.</p>
+          <ul class="tech-feature-list">
+            <li>200 miles of range added in only 10 minutes</li>
+            <li>Robotic auto-aligning charging port</li>
+            <li>Vehicle-to-Home power supply support</li>
+            <li>Wireless inductive parking pad compatible</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- --- BOOKING / TEST DRIVE FORM --- -->
+  <section class="booking section-padding" id="pre-order">
+    <div class="container">
+      <div class="booking-card glass-panel reveal" id="booking-container-box">
+        
+        <!-- Info Panel -->
+        <div class="booking-info" id="booking-info-panel">
+          <span class="accent-text-glow">Reserve Your Spot</span>
+          <h3>Experience Aether GT</h3>
+          <p>Test drive events are starting in major cities. Register below to be invited to our exclusive private viewing and track experiences.</p>
+          
+          <div class="booking-contact-details">
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">📞</div>
+              <div>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0;">Call Us</p>
+                <p style="font-weight: 500; margin-bottom: 0;">+1 (800) AETHER-EV</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">✉️</div>
+              <div>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0;">Email Us</p>
+                <p style="font-weight: 500; margin-bottom: 0;">concierge@aetherev.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">📍</div>
+              <div>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0;">Headquarters</p>
+                <p style="font-weight: 500; margin-bottom: 0;">Silicon Valley, California</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Panel -->
+        <div class="booking-form-wrapper" id="booking-form-panel">
+          <form id="test-drive-form" novalidate>
+            <div class="form-group">
+              <label for="input-name" class="form-label">Full Name</label>
+              <input type="text" id="input-name" class="form-control" placeholder="John Doe" required>
+              <div class="error-message" id="error-name">Please enter your full name.</div>
+            </div>
+
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="input-email" class="form-label">Email Address</label>
+                <input type="email" id="input-email" class="form-control" placeholder="john@example.com" required>
+                <div class="error-message" id="error-email">Please enter a valid email address.</div>
+              </div>
+              <div class="form-group">
+                <label for="input-phone" class="form-label">Phone Number</label>
+                <input type="tel" id="input-phone" class="form-control" placeholder="(555) 000-0000" required>
+                <div class="error-message" id="error-phone">Please enter your phone number.</div>
+              </div>
+            </div>
+
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="input-date" class="form-label">Preferred Date</label>
+                <input type="date" id="input-date" class="form-control" required>
+                <div class="error-message" id="error-date">Please select a future date.</div>
+              </div>
+              <div class="form-group">
+                <label for="select-model" class="form-label">Select Model</label>
+                <select id="select-model" class="form-control" required>
+                  <option value="touring">Aether GT Touring (850 hp)</option>
+                  <option value="performance" selected>Aether GT Performance (1020 hp)</option>
+                  <option value="apex">Aether GT Apex (1200 hp)</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="btn-submit-booking" style="width: 100%; margin-top: 1rem;">
+              <span>Submit Registration</span>
+            </button>
+          </form>
+
+          <!-- Success View -->
+          <div class="booking-success" id="booking-success-view">
+            <div class="success-icon" aria-hidden="true">✓</div>
+            <h3>Registration Complete!</h3>
+            <p>Thank you, <span id="success-user-name" style="font-weight:600; color: var(--accent-teal);">Guest</span>. We have sent a confirmation email to <span id="success-user-email" style="font-weight:500;">your email</span>. An Aether Concierge will contact you shortly to coordinate your private viewing.</p>
+            <button class="btn btn-secondary" id="btn-success-reset">Register Another Session</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- --- FOOTER --- -->
+  <footer class="footer" id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand" id="footer-col-brand">
+          <a href="#" class="logo" style="display:inline-flex; margin-bottom:1rem;" id="footer-logo">
+            <span class="logo-icon" id="footer-logo-icon"></span>
+            AETHER
+          </a>
+          <p>Pioneering the next era of high-performance electric motoring through sustainable design and intelligent technology.</p>
+          <div class="social-links" id="footer-social-icons">
+            <a href="#" class="social-link" aria-label="Twitter / X" id="social-x">𝕏</a>
+            <a href="#" class="social-link" aria-label="YouTube" id="social-yt">▶</a>
+            <a href="#" class="social-link" aria-label="Instagram" id="social-ig">📸</a>
+            <a href="#" class="social-link" aria-label="LinkedIn" id="social-in">in</a>
+          </div>
+        </div>
+
+        <div class="footer-links-col" id="footer-col-vehicles">
+          <h4>Vehicles</h4>
+          <ul class="footer-links">
+            <li><a href="#design" id="footer-link-gt">Aether GT</a></li>
+            <li><a href="#pre-order" id="footer-link-pricing">Pricing & Options</a></li>
+            <li><a href="#technology" id="footer-link-fleet">Commercial Fleets</a></li>
+            <li><a href="#pre-order" id="footer-link-charging-network">Supercharge Grid</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col" id="footer-col-company">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="#" id="footer-link-about">About Us</a></li>
+            <li><a href="#" id="footer-link-careers">Careers</a></li>
+            <li><a href="#" id="footer-link-news">Newsroom</a></li>
+            <li><a href="#" id="footer-link-investors">Investors</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter" id="footer-col-newsletter">
+          <h4>Stay Informed</h4>
+          <p>Subscribe to receive updates on event dates, product drops, and technology announcements.</p>
+          <form class="newsletter-form" id="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!'); this.reset();">
+            <input type="email" class="form-control" placeholder="Your email address" aria-label="Newsletter email" required id="newsletter-email">
+            <button type="submit" class="btn btn-primary" id="newsletter-submit"><span>→</span></button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Aether Electric Vehicles Inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" id="footer-privacy">Privacy Policy</a>
+          <a href="#" id="footer-terms">Terms of Service</a>
+          <a href="#" id="footer-cookie">Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Javascript -->
+  <script src="app.js"></script>
+</body>
+</html>
